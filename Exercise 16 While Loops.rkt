@@ -8,8 +8,6 @@
 ; Termination: Program always terminates because when a reaches 0, the loop stops
 (define (plus a b)
   (local [
-          #| Signatures? I do not understand your purpose statements. |#
-          
           ;Purpose: Calculates distance from 0 from the given natural number
           (define x (void))
           ;Purpose: Calculates the addition being made within the while loop
