@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-advanced-reader.ss" "lang")((modname |Short-Dimitri N-Queens Problem Bonus Quiz--LATE|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "itunes.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #t #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "itunes.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp")) #f)))
+#reader(lib "htdp-advanced-reader.ss" "lang")((teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "itunes.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #t #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "itunes.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp")) #f)))
 (require 2htdp/abstraction)
 
 ; Data Defintions
@@ -44,7 +44,7 @@
 
 ; bpos (listof bpos) --> (listof bpos)
 ; Purpose: To remove the positions in the given list that are
-; threatened by the given bpos.;;;;;;;;;;;;FIX THIS
+; threatened by the given bpos
 (define(rm-threatened a-bpos lob)
   (local(
           ; bpos --> boolean
@@ -77,7 +77,7 @@
          [else(and(not (any-threatened?(first a-lop)(rest a-lop)))
                   (valid-sol? (rest a-lop)))])))
     
-         
+
 
 ; Tests to ensure the program works to spec 
 (check-expect (valid-sol? (place-queens 0)) #true)
